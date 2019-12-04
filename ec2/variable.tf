@@ -1,4 +1,4 @@
-/*variable "my_public_key" {}*/
+variable "my_public_key" {}
 variable "instance_type" {}
 variable "security_group" {}
 

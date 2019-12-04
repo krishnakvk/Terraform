@@ -23,7 +23,7 @@ data "aws_ami" "my_centos" {
 resource "aws_key_pair" "My_keypair" {
   key_name = "Terraform_keypair"
   public_key = "${file(var.my_public_key)}"
-  /*public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdqg1ajFNpBwoTct4CYFF9/d/i9hLTOowtUH6Cxd+nzmQLgE+1x0m3KdR0O4uSS/k63lJg5MYMbXeQGXxm2ivoZhnjIe5W0RjXLTC+3dDSrmnbodhXdmQ2C0j7Jr/mHVhB0JKzhfZrLzfOKeAGdVULH4gjWLK1D1ryPBCoF4b837ky2mxLBZAQY5YO+AD6Qu12DAfamq6gC0ZAYB6Nuq+itGrnwutPmivUttZIz9WxjrmtlX17yyzkHEb+TXP1gPbZedU1QsTkFkSIIh9qPg9sOUuPW3b6bpD4qixLF6SCvGhnbVunlb+0cPC6aR3gxDBY1FA0txgZiwCPQNESPrun redmorph@redmorph-Inspiron-5558o"*/
+  /*public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdqg1ajFNpBwoTct4CYFF9/d/i9hLTOowtUH6Cxd+nzmQLgE+1x0m3KdR0O4uSS/k63lJg5MYMbXeQGXxm2ivoZhnjIe5W0RjXLTC+3dDSrmnbodhXdmQ2C0j7Jr/mHVhB0JKzhfZrLzfOKeAGdVULH4gjWLK1D1ryPBCoF4b837ky2mxLBZAQY5YO+AD6Qu12DAfamq6gC0ZAYB6Nuq+itGrnwutPmivUttZIz9WxjrmtlX17yyzkHEb+TXP1gPbZedU1QsTkFkSIIh9qPg9sOUuPW3b6bpD4qixLF6SCvGhnbVunlb+0cPC6aR3gxDBY1FA0txgZiwCPQNESPrun vamshi@vamshi-Inspiron-5558o"*/
 }
 
 data "template_file" "init" {

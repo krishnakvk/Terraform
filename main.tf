@@ -16,3 +16,19 @@ module "ec2" {
   security_group = module.vpc.security_group
   subnets        = module.vpc.public-subnet
 }
+
+module "alb" {
+  source  = "./alb"
+  vpc_id  = module.vpc.vpc_id
+  subnet1 = module.vpc.subnet1
+  subnet2 = module.vpc.subnet2
+}
+
+module "auto_scaling" {
+  source           = "./auto_scaling"
+  vpc_id           = module.vpc.vpc_id
+  subnet1          = module.vpc.subnet1
+  subnet2          = module.vpc.subnet2
+  target_group_arn = module.alb.alb_target_group_arn
+  my_public_key    = "/tmp/id_rsa.pub"
+}

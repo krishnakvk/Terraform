@@ -30,5 +30,4 @@ module "auto_scaling" {
   subnet1          = module.vpc.subnet1
   subnet2          = module.vpc.subnet2
   target_group_arn = module.alb.alb_target_group_arn
-  my_public_key    = "/tmp/id_rsa.pub"
 }
